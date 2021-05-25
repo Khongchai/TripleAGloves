@@ -16,17 +16,17 @@ const Navigation = ({ siteTitle }) => {
       </LogoLink>
       <NavLinks>
         <li>
-          <NavLink href="/Gloves" id="about-gloves" alt="">
+          <NavLink to="/gloves" id="about-gloves" alt="">
             <Text text={"Gloves"} />
           </NavLink>
         </li>
         <li>
-          <NavLink href="/about" id="about-us-nav" alt="">
+          <NavLink to="/about" id="about-us-nav" alt="">
             <Text text={"About Us"} />
           </NavLink>
         </li>
         <li>
-          <NavLink id="gallery-nav" href="gallery" alt="">
+          <NavLink to="/gallery" id="gallery-nav" alt="">
             <Text text={"Gallery"} />
           </NavLink>
         </li>

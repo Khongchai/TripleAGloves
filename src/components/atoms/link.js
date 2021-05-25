@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { Link as GatsbyLink } from "gatsby"
 
-const Link = styled.a`
+const Link = styled(GatsbyLink)`
   color: ${props => props.theme.colors.gray};
   padding: 0.25rem 0;
   position: relative;

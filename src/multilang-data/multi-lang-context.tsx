@@ -12,7 +12,7 @@ const serverSideRendering = typeof window == "undefined"
 export function LanguageProvider({ children }) {
   let defaultLanguage: undefined | string = undefined
   if (!serverSideRendering) {
-    defaultLanguage = localStorage.get("lang")
+    defaultLanguage = localStorage.getItem("lang")
   }
   const [userLanguage, setUserLanguage] = useState(defaultLanguage || "en")
 
