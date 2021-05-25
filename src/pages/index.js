@@ -9,7 +9,7 @@ import SectionSetup from "@molecules/sectionSetup"
 import SEO from "@utils/seo"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { ImageSlideshow } from "../components/molecules/ImageSlideshow"
 
@@ -25,7 +25,6 @@ const IndexPage = () => {
       }
     }
   `)
-  console.log(data)
 
   return (
     <>
