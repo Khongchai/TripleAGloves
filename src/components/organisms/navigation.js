@@ -11,7 +11,7 @@ const Navigation = ({ siteTitle }) => {
   const { userLanguage, changeLanguage } = useContext(LanguageContext)
   return (
     <Nav className="nav-bar">
-      <LogoLink id="landing-page-nav" href="/">
+      <LogoLink id="landing-page-nav" to="/">
         <Logo />
       </LogoLink>
       <NavLinks>
