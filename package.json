@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-payments",
+  "name": "triple-a-gloves",
   "private": false,
-  "description": "A Gatsby starter for creating SaaS landing pages using MoonClerk to accept payments.",
+  "description": "Portfolio for Triple A Gloves",
   "version": "0.1.0",
-  "author": "Lee Campbell <lee@moonclerk.com>",
+  "author": "Lee Campbell <lee@moonclerk.com> (gatsby Moonclerk template), Khongchai Greesuradej <world1955@hotmail.com> (dev)",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
@@ -60,9 +60,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/moonclerk/gatsby-starter-payments"
-  },
-  "bugs": {
-    "url": "https://github.com/moonclerk/gatsby-starter-payments/issues"
+    "url": "https://github.com/Khongchai/TripleAGloves"
   }
 }
