@@ -1,0 +1,2 @@
+Get the two languages thing working 
+Work on mobile layout
