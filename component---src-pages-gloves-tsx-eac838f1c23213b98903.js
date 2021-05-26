@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"hGi/":function(n,t,e){"use strict";function u(n){if(null==n)throw new TypeError("Cannot destructure undefined")}e.d(t,"a",(function(){return u}))},mtcc:function(n,t,e){"use strict";e.r(t);var u=e("hGi/"),r=e("q1tI"),c=e.n(r);t.default=function(n){return Object(u.a)(n),c.a.createElement("div",null,"Gloves page")}}}]);
-//# sourceMappingURL=component---src-pages-gloves-tsx-eac838f1c23213b98903.js.map
