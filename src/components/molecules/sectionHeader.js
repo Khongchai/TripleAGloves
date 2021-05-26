@@ -30,8 +30,8 @@ const SectionHeader = () => {
      * Sizes
      */
     const reducers = {
-      height: 1.3,
-      width: 1.3,
+      height: 1.6,
+      width: 1.6,
     }
     const sizes = {
       width: window.innerWidth / reducers.width,
@@ -261,7 +261,7 @@ const HeaderContainer = styled.header`
   background-image: url("vectors/decor1.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
+  background-position: top;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -280,9 +280,11 @@ const CustomLink = styled(props => <Link {...props} />)`
   margin-bottom: 1rem;
 `
 
-const Motto = styled.h2`
+const Motto = styled.h1`
   position: relative;
   z-index: 100;
+  line-height: 2.8rem;
+  font-size: clamp(3rem, 100% + 20px, 4rem);
 `
 const GLoveAnimationContainer = styled.div`
   display: flex;

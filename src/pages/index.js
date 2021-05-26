@@ -9,14 +9,20 @@ import SectionSetup from "@molecules/sectionSetup"
 import SEO from "@utils/seo"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import React, { useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
-import { ImageSlideshow } from "../components/molecules/ImageSlideshow"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query IndexImagesQuery {
       building: file(relativePath: { eq: "illustrations/building1.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+      building2: file(relativePath: { eq: "illustrations/building3.png" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -38,9 +44,11 @@ const IndexPage = () => {
       </HeaderCurve>
       <SectionSetup />
       <ContentContainer content grid gridSplit>
-        <ImageSlideshow />
+        <Image>
+          <Img fluid={data.building2.childImageSharp.fluid}></Img>
+        </Image>
         <ContentBlock>
-          <Subheading>Our Gloves</Subheading>
+          <Subheading>Who are we?</Subheading>
           <h2>Made of Adamantium etc. etc</h2>
           <p>
             No coding, merchant account, or hosting required. Create completely

@@ -6,6 +6,7 @@ import { media } from "@utils/media"
 import Link from "@atoms/link"
 import { HamburgerMenu } from "./HamburgerMenu"
 import { BurgerButton } from "../atoms/BurgerToggle"
+import Logo from "@atoms/logo"
 
 export const NavLinksDesktop: React.FC<{}> = ({}) => {
   return (
@@ -33,6 +34,9 @@ export const NavLinksMobile: React.FC<{}> = ({}) => {
         src="vectors/hamburger.svg"
       />
       <HamburgerMenu show={showMenu}>
+        <LogoLink to="/">
+          <Logo />
+        </LogoLink>
         <NavigationLinksSection layoutDir="column" />
       </HamburgerMenu>
     </MobileWrapper>
@@ -89,6 +93,12 @@ const NavigationLinksSection: React.FC<{ layoutDir?: string }> = ({
   )
 }
 
+const LogoLink = styled(Link)`
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+`
+
 const NavLinks = styled.ul`
   display: flex;
   justify-content: flex-start;
@@ -118,7 +128,6 @@ const NavLinks = styled.ul`
 
 const NavLink = styled(Link)`
   @media only screen and (max-width: 800px) {
-    color: white !important;
     margin-right: 0 !important;
     font-size: 2rem;
   }

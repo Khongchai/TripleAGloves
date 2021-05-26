@@ -8,11 +8,14 @@ import Link from "@atoms/link"
 const Navigation = ({ siteTitle }) => {
   return (
     <Nav className="nav-bar">
-      <LogoLink id="landing-page-nav" to="/">
+      <LogoLinkLeft id="landing-page-nav" to="/">
         <Logo />
-      </LogoLink>
+      </LogoLinkLeft>
       <NavLinksDesktop />
       <NavLinksMobile />
+      <LogoLinkRight id="landing-page-nav" to="/">
+        <Logo />
+      </LogoLinkRight>
     </Nav>
   )
 }
@@ -40,7 +43,23 @@ const Nav = styled.nav`
   flex-wrap: wrap;
 `
 
-const LogoLink = styled(Link)`
-  margin-left: 1rem;
+const LogoLinkRight = styled(Link)`
+  margin-left: auto;
+  position: relative;
+  z-index: -1;
+  @media only screen and (max-width: 800px) {
+    display: block;
+  }
+  @media only screen and (min-width: 801px) {
+    display: none;
+  }
+`
+const LogoLinkLeft = styled(Link)`
   margin-right: auto;
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
+  @media only screen and (min-width: 801px) {
+    display: block;
+  }
 `

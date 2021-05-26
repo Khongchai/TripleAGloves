@@ -128,7 +128,7 @@ const TopicSelector = styled.div`
     margin-bottom: 1rem;
     margin-right: 1rem;
     position: relative;
-    z-index: 1001;
+    z-index: 100;
   }
 `
 
