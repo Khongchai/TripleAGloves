@@ -32,24 +32,6 @@ const gallery: React.FC<galleryProps> = ({}) => {
         }
       }
 
-      certificates: allFile(
-        filter: {
-          extension: { regex: "/(jpg)|(jpeg)|(png)/" }
-          sourceInstanceName: { eq: "images" }
-          relativeDirectory: { eq: "company-images/certificates" }
-        }
-      ) {
-        edges {
-          node {
-            childImageSharp {
-              fluid(quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-
       factories: allFile(
         filter: {
           extension: { regex: "/(jpg)|(jpeg)|(png)/" }
@@ -107,9 +89,6 @@ const gallery: React.FC<galleryProps> = ({}) => {
   `)
   const extractedImages = {
     boiler: data.boiler.edges.map(
-      edge => edge.node.childImageSharp.fluid
-    ) as any[],
-    certificates: data.certificates.edges.map(
       edge => edge.node.childImageSharp.fluid
     ) as any[],
     factories: data.factories.edges.map(
