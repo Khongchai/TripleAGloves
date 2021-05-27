@@ -73,11 +73,14 @@ const SectionHeader = () => {
     dirLight.position.x = -19
     dirLight.position.y = 20
     dirLight.position.z = 16.5
+    dirLight.intensity = 3.5
     const dirLight2 = new THREE.DirectionalLight(0xffffff, 0.9)
     dirLight2.position.x = 20
     dirLight2.position.y = -8.8
     dirLight2.position.z = -7.8
-    const ambientLight = new THREE.AmbientLight("white", 0.4)
+    dirLight2.intensity = 3.5
+    const ambientLight = new THREE.AmbientLight("white", 0.7)
+
     // gui.add(pointLight2.position, "x", -10, 20, 0.1)
     // gui.add(pointLight2.position, "y", -10, 20, 0.1)
     // gui.add(pointLight2.position, "z", -10, 20, 0.1)
@@ -112,6 +115,8 @@ const SectionHeader = () => {
     handTexture.flipY = false
     const handMaterial = new THREE.MeshStandardMaterial({
       color: new THREE.Color(gloveColor.color1),
+      normalMap: handNormalTexture,
+      normalScale: new THREE.Vector2(0.1, 0.1),
     })
     loader.load(
       "3d/Glove.gltf",
@@ -131,15 +136,15 @@ const SectionHeader = () => {
 
     document.getElementById("color1-selector").addEventListener("click", () => {
       handMaterial.color = new THREE.Color(gloveColor.color1)
-      dirLight.intensity = 0.9
-      dirLight2.intensity = 0.9
+      dirLight.intensity = 3.5
+      dirLight2.intensity = 3.5
       ambientLight.intensity = 0.4
     })
 
     document.getElementById("color2-selector").addEventListener("click", () => {
       handMaterial.color = new THREE.Color(gloveColor.color2)
-      dirLight.intensity = 0.7
-      dirLight2.intensity = 0.7
+      dirLight.intensity = 3
+      dirLight2.intensity = 3
       ambientLight.intensity = 0.3
     })
 
@@ -168,6 +173,7 @@ const SectionHeader = () => {
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     renderer.setClearColor(0x000000, 0)
+    renderer.physicallyCorrectLights = true
 
     /**
      * Animate
