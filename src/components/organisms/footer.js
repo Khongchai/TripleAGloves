@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import Logo from "@atoms/logo"
-import Link from "@atoms/link"
 import LinkTop from "@atoms/linkTop"
 import { media } from "@utils/media"
 

@@ -38,7 +38,7 @@ const Nav = styled.nav`
   padding: 2rem;
   position: relative;
   top: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 1000;
   flex-wrap: wrap;
 `

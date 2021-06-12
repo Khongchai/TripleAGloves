@@ -16,7 +16,6 @@ import { LanguageProvider } from "../multilang-data/multi-lang-context"
 
 const GlobalStyle = createGlobalStyle`
 html{
-  overflow-x: hidden;
   cursor: url("illustrations/cursor/normal.png"), context-menu;
   &:active {
     cursor: url('illustrations/cursor/click.png'), auto;
@@ -24,7 +23,6 @@ html{
 body{
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow-x: hidden;
 }
 }
 

@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { HeaderCurve } from "../components/atoms/HeaderCurve"
 import { Topic } from "../components/atoms/Topic"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import { useStaticQuery, graphql } from "gatsby"
 import { useFirstAsKeyForSecondkeyArr } from "../utils/functions/RecordUseFirstAsKeyForSecond"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -70,12 +69,15 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
           ))}
         </TopicSelector>
       </AboutHeader>
-      <HeaderCurve fill="none" viewBox="0 0 1680 232">
-        <path
-          fill="#B6D3F9"
-          d="M0 0h1680v119.847S1428.43 231 1260 231C967.343 231 712.766 9.26 420 9.26 251.618 9.26 0 119.848 0 119.848V0z"
-        />
-      </HeaderCurve>
+      <div style={{ maxWidth: "100vw", overflowX: "hidden" }}>
+        <HeaderCurve fill="none" viewBox="0 0 1680 232">
+          <path
+            fill="#B6D3F9"
+            d="M0 0h1680v119.847S1428.43 231 1260 231C967.343 231 712.766 9.26 420 9.26 251.618 9.26 0 119.848 0 119.848V0z"
+          />
+        </HeaderCurve>
+      </div>
+
       <AboutBody>
         <TopicDescription>
           <h3>{titleNodeMap[selectedTopic].frontmatter.title}</h3>
