@@ -29,6 +29,7 @@ const Container = styled.div`
   position: sticky;
   background-color: white;
   transition: 0.2s;
+  z-index: 10;
 `
 const SectionLink = styled.a`
   color: #4d92eb;

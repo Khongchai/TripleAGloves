@@ -1,8 +1,9 @@
 import React, { useEffect } from "react"
 import styled from "styled-components"
-import { IntroSection } from "../components/molecules/glovesPage/IntroSection"
+import { StyledIntroSection } from "../components/molecules/glovesPage/IntroSection"
 import { ProductFeaturesSection } from "../components/molecules/glovesPage/ProductFeaturesSection"
 import SectionsNavigator from "../components/molecules/SectionsNavigator"
+import SectionSetup from "@molecules/sectionSetup.js"
 
 const Gloves: React.FC<{}> = ({}) => {
   const jumpableSections = [
@@ -40,7 +41,7 @@ const Gloves: React.FC<{}> = ({}) => {
 
   return (
     <GlovePageContainer>
-      <IntroSection />
+      <StyledIntroSection />
       <JumpableSection id="jumpableSections">
         <SectionsNavigator sectionNames={jumpableSections} />
         <ProductFeaturesSection
@@ -56,6 +57,7 @@ const Gloves: React.FC<{}> = ({}) => {
           Certification Section
         </CertificationSection>
       </JumpableSection>
+      <SectionSetup />
     </GlovePageContainer>
   )
 }
@@ -64,6 +66,13 @@ const GlovePageContainer = styled.div`
   min-height: 100vh;
   height: fit-content;
   position: relative;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  transition: 0.3s;
+  @media (max-width: 1300px) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 `
 
 const JumpableSection = styled.div`
