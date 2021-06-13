@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 import Link from "@atoms/link"
 
@@ -28,6 +28,7 @@ const Container = styled.div`
   top: 0;
   position: sticky;
   background-color: white;
+  transition: 0.2s;
 `
 const SectionLink = styled.a`
   color: #4d92eb;
