@@ -20,10 +20,12 @@ html{
   &:active {
     cursor: url('illustrations/cursor/click.png'), auto;
 }
+
 body{
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 }
 
  @media (min-width: 480px) {
@@ -40,6 +42,11 @@ body{
   html {
     font-size: 125%;
   }
+}
+
+#gatsby-focus-wrapper, #___gatsby{
+  height: fit-content;
+  width:fit-content;
 }
 `
 

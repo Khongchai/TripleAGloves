@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import Link from "@atoms/link"
 
-const SectionsNavigator: React.FC<{ sectionNames: string[] }> = ({
+const SectionsNavigator: React.FC<{ sectionNames: string[]; row: number }> = ({
   sectionNames,
+  row,
 }) => {
   const sections = sectionNames.map(name => {
     const section = (
@@ -14,31 +14,48 @@ const SectionsNavigator: React.FC<{ sectionNames: string[] }> = ({
     return section
   })
 
-  return <Container id="sections-nav">{sections}</Container>
+  return (
+    <Container row={row} id="sections-nav">
+      {sections}
+    </Container>
+  )
 }
 
 export default SectionsNavigator
 
 const Container = styled.div`
-  height: 20vh;
   display: flex;
+  height: 100px;
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
+  grid-row: ${props => props.row};
+  grid-column: 1 / -1;
   top: 0;
   position: sticky;
-  background-color: white;
+  background-color: #eef5fd;
   transition: 0.2s;
   z-index: 10;
 `
+
 const SectionLink = styled.a`
-  color: #4d92eb;
-  font-size: 24px;
-  opacity: 0.7;
+  font-size: 20px;
+  display: grid;
+  height: 100%;
+  place-items: center;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+
   border-bottom: 2px transparent solid;
-  padding: 1rem;
   text-decoration: none;
+  transition: 0.3s;
+  color: ${props => props.theme.colors.mainBlue};
   &:hover {
-    border-bottom: solid 2px #f2bb63 !important;
+    color: white !important;
+    background-color: ${props => props.theme.colors.mainBlue} !important;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 14px !important;
   }
 `

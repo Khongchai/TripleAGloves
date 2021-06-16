@@ -2,3 +2,6 @@ try to get one component working with gatsby background image. Refactor it into 
 
 change the anchor tag to a normal div and use the id provided to take user to different sections + offset the fixed 
 navbar instead.
+
+
+work on specifications and certification sections

@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image/withIEPolyfill"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 interface TopicProps {
