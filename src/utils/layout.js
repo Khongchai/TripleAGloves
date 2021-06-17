@@ -44,10 +44,7 @@ body{
   }
 }
 
-#gatsby-focus-wrapper, #___gatsby{
-  height: fit-content;
-  width:fit-content;
-}
+
 `
 
 const Layout = ({ children }) => {

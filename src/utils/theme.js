@@ -15,6 +15,7 @@ const theme = {
     lightGray: "#8A828F",
     white: "#FFFFFF",
     mainBlue: "#4D92EB",
+    lightBlue: "#a6c9f5",
   },
   spacing: {
     xxs: "0.5rem",

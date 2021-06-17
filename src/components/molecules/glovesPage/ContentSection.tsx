@@ -23,7 +23,7 @@ export const ContentSection: React.FC<ContentSection> = ({
 }) => {
   return (
     <GridContainer row={row} id={id}>
-      <Title title={title} />
+      <Title mirrorText={true} title={title} />
       <FlexContainer>
         <ThreePicturesSection pictures={introImage} altText="intro-pictures" />
         <StyledDescription>{children}</StyledDescription>

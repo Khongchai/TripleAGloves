@@ -5,6 +5,8 @@ import SectionsNavigator from "../components/molecules/SectionsNavigator"
 import SectionSetup from "@molecules/sectionSetup.js"
 import { PackagingSection } from "../components/molecules/glovesPage/PackagingSection"
 import { graphql, useStaticQuery } from "gatsby"
+import { SpecificationsSection } from "../components/molecules/glovesPage/SpecificationsSection"
+import { CertificationsSection } from "../components/molecules/glovesPage/CertificationsSection/CertificationsSection"
 
 const Gloves: React.FC<{}> = ({}) => {
   const data = useStaticQuery(graphql`
@@ -128,6 +130,8 @@ const Gloves: React.FC<{}> = ({}) => {
           row={4}
           id={jumpableSections[1]}
         />
+        <SpecificationsSection row={5} id={jumpableSections[2]} />
+        <CertificationsSection row={6} id={jumpableSections[3]} />
       </GlovePageContainer>
       <SectionSetup />
     </>
@@ -147,20 +151,8 @@ const GlovePageContainer = styled.div`
   row-gap: 2rem;
   grid-template-columns: 0.2fr [content-begin] 1fr [content-end] 0.2fr;
   @media (max-width: 1300px) {
-    grid-template-columns: [content-begin] 1fr [content-end];
+    grid-template-columns: 0.1px [content-begin] 100% [content-end] 0.1px;
   }
-`
-
-const SpecificationsSection = styled.div`
-  height: 60vh;
-  width: 100%;
-  background: Yellow;
-`
-
-const CertificationSection = styled.div`
-  height: 80vh;
-  width: 100%;
-  background: purple;
 `
 
 export default Gloves

@@ -36,6 +36,9 @@ const Container = styled.div`
   background-color: #eef5fd;
   transition: 0.2s;
   z-index: 10;
+  @media (max-width: 800px) {
+    display: none;
+  }
 `
 
 const SectionLink = styled.a`

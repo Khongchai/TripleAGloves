@@ -3,17 +3,20 @@ import styled from "styled-components"
 
 interface TitleProps {
   title: string
+  mirrorText?: boolean
 }
 
-export const Title: React.FC<TitleProps> = ({ title }) => {
+export const Title: React.FC<TitleProps> = ({ title, mirrorText }) => {
   return (
     <TitlesContainer>
       <TitleText>
         <b>{title}</b>
       </TitleText>
-      <MirrorText>
-        <b>{title}</b>
-      </MirrorText>
+      {mirrorText ? (
+        <MirrorText>
+          <b>{title}</b>
+        </MirrorText>
+      ) : null}
     </TitlesContainer>
   )
 }
