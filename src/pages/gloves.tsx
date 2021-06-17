@@ -65,24 +65,26 @@ const Gloves: React.FC<{}> = ({}) => {
     rootMargin: "0px",
     threshold: 0.6,
   }
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        document.getElementById(
-          entry.target.id + "-nav"
-        ).style.backgroundColor = "#4D92EB"
-        document.getElementById(entry.target.id + "-nav").style.color = "white"
-      } else {
-        document.getElementById(
-          entry.target.id + "-nav"
-        ).style.backgroundColor = "unset"
-        document.getElementById(entry.target.id + "-nav").style.color =
-          "#4D92EB"
-      }
-    })
-  }, observerOptions)
 
   useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.getElementById(
+            entry.target.id + "-nav"
+          ).style.backgroundColor = "#4D92EB"
+          document.getElementById(entry.target.id + "-nav").style.color =
+            "white"
+        } else {
+          document.getElementById(
+            entry.target.id + "-nav"
+          ).style.backgroundColor = "unset"
+          document.getElementById(entry.target.id + "-nav").style.color =
+            "#4D92EB"
+        }
+      })
+    }, observerOptions)
+
     jumpableSections.forEach(section => {
       const elem = document.getElementById(section)
       if (elem) {
