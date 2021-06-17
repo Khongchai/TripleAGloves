@@ -26,6 +26,7 @@ const TitlesContainer = styled.div`
   grid-column: 2 / -1;
   width: fit-content;
   margin-bottom: 2rem;
+  margin-left: 0.2rem;
 `
 
 const TitleText = styled.h2`

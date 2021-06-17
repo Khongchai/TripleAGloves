@@ -16,8 +16,8 @@ export const SpecificationsSection: React.FC<SpecificationsSectionProps> = ({
 }) => {
   return (
     <Container id={id} row={row}>
+      <Title title={"Specifications"} />
       <TableContainer className="first-table">
-        <Title title={"Specifications"} />
         <TableWithAlternatingColors>
           <tr>
             <TDNoBorder>Type</TDNoBorder>
@@ -70,17 +70,16 @@ export const SpecificationsSection: React.FC<SpecificationsSectionProps> = ({
           </tr>
         </TableWithAlternatingColors>
       </TableContainer>
+      <Title title={"Product Properties"} />
       <TableContainer>
-        <Title title={"Product Properties"} />
         <TableFirstChildOfRowIsBlue>
           <tr>
-            <TH>Dimensions</TH>
+            <TH rowSpan="2">Dimensions</TH>
             <TH colSpan="4" center={true}>
               Standards
             </TH>
           </tr>
           <tr>
-            <TH></TH>
             <TH>Triple A GLoves</TH>
             <TH>ASTM</TH>
             <TH>EN 455</TH>
@@ -189,8 +188,8 @@ const Container = styled.div<{ row: number }>`
 
 const TableContainer = styled.div`
   display: flex;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
   justify-content: center;
 
   @media (max-width: 800px) {

@@ -51,7 +51,7 @@ const StyledPackagingSection = styled.div`
   text-align: center;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  padding-left: 1rem;
+  padding-left: 0.2rem;
 `
 
 const Container = styled.div`

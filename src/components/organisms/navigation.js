@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { NavLinksDesktop, NavLinksMobile } from "@molecules/NavLinks"
 import Link from "@atoms/link"
 
-const Navigation = ({ siteTitle }) => {
+const Navigation = ({}) => {
   return (
     <Nav className="nav-bar">
       <LogoLinkLeft id="landing-page-nav" to="/">

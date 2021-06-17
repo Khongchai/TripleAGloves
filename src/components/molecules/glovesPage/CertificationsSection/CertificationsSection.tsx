@@ -120,6 +120,7 @@ export const CertificationsSection: React.FC<CertificationsSectionProps> = ({
               </TD>
             </tr>
           </Table>
+          <div style={{ width: "8px" }}></div>
           <StaticImage
             src="./CertLogos.png"
             alt="Cert logo"
@@ -179,4 +180,3 @@ const Logos = styled.div`
     justify-content: center;
   }
 `
-const StyledStaticImage = styled(StaticImage)``
